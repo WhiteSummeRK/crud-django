@@ -2,9 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Pagina de Login Inicial</title>
+    <title>Pagina de Feed</title>
   </head>
   <body>
-    <h1>Funcionou!</h1>
+    <h1>Feed de noticias dos amiguinhos da WEB!</h1>
+    <hr>
+    {% for item in feeds %}
+      <h3>Escrito por: {{ item.user.name }}</h3>
+      <p>{{ item.date }}</p>
+      <h5>{{ item.msg }}</h5>
+      <hr>
+    {% endfor %}
   </body>
 </html>
